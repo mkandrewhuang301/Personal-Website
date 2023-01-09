@@ -2,10 +2,11 @@
 
 <html>
     <head>
-        <title>Contact Page</title>
+        <title>Home Page</title>
         <link rel = "stylesheet" type = "text/css" href = "styles.css">
-        <link rel = "stylesheet"  href =  "./fontawesome-free-5.15.4-web/css/all.css">
         <link rel = "stylesheet" type = "text/css" href = "contact_styles.css">
+        <link rel = "stylesheet"  href =  "./fontawesome-free-5.15.4-web/css/all.css">
+        <script src = "https://smtpjs.com/v3/smtp.js"></script>
     </head>
     <body>
         <header>
@@ -16,10 +17,14 @@
             </div>
             <ul class = "navbar">
                 <li class = "first_btn"> <a href = "projects.html">Projects</a></li>
-                <li> <a href = "#">Photography</a> </li>
+                <div class = "vl"></div>
+                <li> <a href = "/#info-anchor">About</a> </li>
+                <div class = "vl"></div>
                 <li id = "initial"> <a href = "index.html" class = "active">A.H.</a></li>
-                <li> <a href = "contact.html"> Contact</a></li>
+                <div class = "vl"></div>
                 <li class = "last_btn"> <a href = "resume.pdf" target="_blank" rel="noopener noreferrer" class = "button"> CV</a></li>
+                <div class = "vl"></div>
+                <li> <a href = "contact.html"> Contact</a></li>
                 <span class = "icons">
                     <a href = "https://www.instagram.com/andrewhuang_100/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     <a href = "https://www.linkedin.com/in/andrew-huang-/"><i class="fab fa-linkedin"></i></a>
@@ -27,22 +32,30 @@
                 </span>
             </ul>
         </header>
-        <!--
-        <section class = "contact_section">
-            <h3 id = "contact_header">Want to get in touch?</h3>
-            <p>email: andyallenhuang@gmail.com</p>
-            <p>phone: (919)-995-3829</p>
-            <span class = "contact_icons">
-                <a href = "https://www.instagram.com/andrewhuang_100/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                <a href = "https://www.linkedin.com/in/andrew-huang-/"><i class="fab fa-linkedin"></i></a>
-                <a href = "https://github.com/mkandrewhuang301"><i class="fab fa-github" aria-hidden="true"></i></a>
-            </span>
-            
-        </section>
-        -->
         
-        
-        <script src = "app.js"></script>
+        <article class="contact">
+            <div class = "contact-box">
+                <p>Contact Me</p>
+                <p><span style = "font-size: 15px"> Feel free to send me a message. I try to get back to you as soon as I can. </span></p>
+                <form class = "contact-form" action = "#" id = "submit">
+                    <input type = "text" name = "name" id = "name" placeholder = "Your name:">
+                    <input type = "text" name = "mail" id = "mail" placeholder = "Your Email:">
+                    <br>
+                    <textarea id="subject" name="subject" placeholder="Your Message" style="height:50px"></textarea>
+                    <br>
+                    <input id = "send" type="submit" >
+                </form> 
+            </div>
+        </article>
+        <script>
+           const textarea = document.querySelector("textarea");
+           textarea.addEventListener("keyup", e =>{
+                textarea.style.height = "63px";
+                let scHeight = e.target.scrollHeight;
+                textarea.style.height = `${scHeight}px`;
+           });
+        </script>
+        <script src = "contact.js"></script>
     </body>
     
 </html>

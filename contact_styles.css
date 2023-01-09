@@ -1,3 +1,77 @@
-.contact_section{
-    top: 40%;
+body{
+    min-height: 120vh;
+}
+.contact{
+
+    position:relative;
+    /* Below two lines are gold standard for positioning center in css*/
+    display:flex;
+    justify-content:center;
+    width:100%;;
+    height:auto;
+    top:100px;;
+    
+}
+.contact-box{
+    width:700px;
+    text-align:center;
+    border-style:solid;
+    border-color:rgb(192, 190, 190);
+    display: inline-block;
+    border-radius:2%;
+    margin-left:25px;
+        margin-right:25px;
+}
+.contact-box p{
+    font-size:1.7em;
+}
+.contact-box form input{
+    border-radius:4px;
+    border: 1px solid rgb(146, 143, 143);
+    font-size:16px;
+    border-color:#bfbfbf;
+}
+#name,  #mail{
+    width:43%;
+    height:40px;
+    margin:20px 2px;
+}
+#subject{
+    width:86%;
+    height:40vw;
+}
+input[type = text],select, textarea{
+    resize: vertical;
+    box-sizing: border-box;
+}
+input[type=submit]{
+    padding: 10px 20px;
+    margin:10px;
+    border-color: #bfbfbf;
+    border-width:2px;
+}
+input[type=submit]:hover {
+    background-color: #e7dfdb;
+  }
+.contact-form textarea{
+   outline:none;
+   font-size:16px;
+   border-color:#bfbfbf;
+   border-radius:2px;
+}
+textarea:is(:focus, :valid){
+    border-color: #bfbfbf;
+    border-width:2px;
+    
+}
+textarea::-webkit-scrollbar{
+    width:0px;
+
+}
+@media screen and (max-width: 700px){
+    .contact-box{
+        width:600px;
+        margin-left:25px;
+        margin-right:25px;
+    }
 }

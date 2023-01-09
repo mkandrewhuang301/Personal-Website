@@ -2,10 +2,12 @@
 
 <html>
     <head>
-        <title>Projects Page</title>
+        <title>Home Page</title>
         <link rel = "stylesheet" type = "text/css" href = "styles.css">
+        <link rel = "stylesheet" type = "text/css" href = "project_styles.css">
         <link rel = "stylesheet"  href =  "./fontawesome-free-5.15.4-web/css/all.css">
     </head>
+
     <body>
         <header>
             <div class="navbar__toggle" id="mobile-menu">
@@ -15,10 +17,14 @@
             </div>
             <ul class = "navbar">
                 <li class = "first_btn"> <a href = "projects.html">Projects</a></li>
-                <li> <a href = "#">Photography</a> </li>
+                <div class = "vl"></div>
+                <li> <a href = "/#info-anchor">About</a> </li>
+                <div class = "vl"></div>
                 <li id = "initial"> <a href = "index.html" class = "active">A.H.</a></li>
-                <li> <a href = "contact.html"> Contact</a></li>
+                <div class = "vl"></div>
                 <li class = "last_btn"> <a href = "resume.pdf" target="_blank" rel="noopener noreferrer" class = "button"> CV</a></li>
+                <div class = "vl"></div>
+                <li> <a href = "contact.html"> Contact</a></li>
                 <span class = "icons">
                     <a href = "https://www.instagram.com/andrewhuang_100/?hl=en"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                     <a href = "https://www.linkedin.com/in/andrew-huang-/"><i class="fab fa-linkedin"></i></a>
@@ -26,6 +32,14 @@
                 </span>
             </ul>
         </header>
+        <section class = "project">
+            <h1 id = "project_title"> Projects</h1>
+            <p id = "project_user"> Andrew Huang</p>
+        </section>
+        <section class = "project_body">
+            <p>This page will contain my future technical projects</p>
+
+        </section>
         
         
         <script src = "app.js"></script>
